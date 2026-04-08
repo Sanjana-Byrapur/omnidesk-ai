@@ -63,9 +63,19 @@ def list_events(date: str = None) -> dict:
     events.sort(key=lambda x: (x.get("date", ""), x.get("time", "")))
     return {"events": events, "count": len(events)}
 
-def delete_event(event_id: str) -> dict:
-    db.collection("events").document(event_id).delete()
-    return {"success": True, "event_id": event_id}
+def delete_event(title: str) -> dict:
+    try:
+        docs = db.collection("events").stream()
+
+        for doc in docs:
+            if doc.to_dict().get("title", "").lower() == title.lower():
+                db.collection("events").document(doc.id).delete()
+                return {"success": True}
+
+        return {"success": False, "error": "Event not found"}
+
+    except Exception as e:
+        return {"success": False, "error": str(e)}
 
 # ── NOTES ──────────────────────────────────────────────
 def create_note(title: str, content: str, tags: list = None) -> dict:

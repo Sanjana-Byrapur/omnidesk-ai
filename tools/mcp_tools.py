@@ -82,16 +82,16 @@ CALENDAR_TOOLS = [
         }
     },
     {
-        "name": "delete_event",
-        "description": "Delete a calendar event using its title",
-        "parameters": {
-            "type": "object",
-            "properties": {
-                "title": {"type": "string", "description": "Event title"}
-            },
-            "required": ["title"]
-        }
+    "name": "delete_event",
+    "description": "Delete a calendar event by its title",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "title": {"type": "string"}
+        },
+        "required": ["title"]
     }
+}
 ]
 
 
