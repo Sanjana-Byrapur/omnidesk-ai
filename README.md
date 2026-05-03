@@ -95,7 +95,7 @@ Show everything
 
 ## 🛠️ Setup (Local)
 
-git clone https://github.com/your-username/omnidesk-ai.git  
+git clone https://github.com/Sanjana-Byrapur/omnidesk-ai.git  
 cd omnidesk  
 
 pip install -r requirements.txt  
