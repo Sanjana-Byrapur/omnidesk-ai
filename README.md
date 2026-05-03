@@ -2,6 +2,9 @@
 
 OmniDesk is an AI-powered productivity assistant that uses a **multi-agent architecture** to manage tasks, calendar events, and notes. It leverages **Google Gemini (Vertex AI)** along with **FastAPI** and **Firestore** to provide intelligent, conversational automation.
 
+## 🚀 Live Demo
+
+🔗 https://omnidesk-service-82681493878.us-central1.run.app/
 ---
 
 ## 🧠 Features
